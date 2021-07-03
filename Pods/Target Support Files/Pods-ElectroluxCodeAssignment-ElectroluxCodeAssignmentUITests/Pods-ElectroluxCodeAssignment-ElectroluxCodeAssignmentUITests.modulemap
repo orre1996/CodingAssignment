@@ -1,0 +1,6 @@
+framework module Pods_ElectroluxCodeAssignment_ElectroluxCodeAssignmentUITests {
+  umbrella header "Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

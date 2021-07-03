@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_ElectroluxCodeAssignment_ElectroluxCodeAssignmentUITests : NSObject
+@end
+@implementation PodsDummy_Pods_ElectroluxCodeAssignment_ElectroluxCodeAssignmentUITests
+@end
