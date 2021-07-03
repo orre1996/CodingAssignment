@@ -18,6 +18,10 @@
 		10ECA54D2690691D00E14EC3 /* FlickrPhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ECA54C2690691D00E14EC3 /* FlickrPhotosResponse.swift */; };
 		10ECA5552690757B00E14EC3 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ECA5542690757B00E14EC3 /* Color+Extension.swift */; };
 		10ECA56526907B7F00E14EC3 /* ImageGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ECA56426907B7F00E14EC3 /* ImageGalleryViewModel.swift */; };
+		10ECA56A26907FE600E14EC3 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ECA56926907FE600E14EC3 /* View+Extension.swift */; };
+		10ECA56F269081FA00E14EC3 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ECA56E269081FA00E14EC3 /* Array+Extension.swift */; };
+		10ECA5752690849600E14EC3 /* GridPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ECA5742690849600E14EC3 /* GridPhoto.swift */; };
+		10ECA580269087BC00E14EC3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ECA57F269087BC00E14EC3 /* Constants.swift */; };
 		1A741AD1571D25A6DA3FFEF3 /* Pods_ElectroluxCodeAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCECE7954E62DD0B673D782 /* Pods_ElectroluxCodeAssignment.framework */; };
 		6380875E036938B13C452C54 /* Pods_ElectroluxCodeAssignment_ElectroluxCodeAssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E83954477D0A1397911986 /* Pods_ElectroluxCodeAssignment_ElectroluxCodeAssignmentUITests.framework */; };
 		9D9218DDE9C238628ECFCA22 /* Pods_ElectroluxCodeAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE547DA256AB7B45D7460A1 /* Pods_ElectroluxCodeAssignmentTests.framework */; };
@@ -58,6 +62,10 @@
 		10ECA54C2690691D00E14EC3 /* FlickrPhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotosResponse.swift; sourceTree = "<group>"; };
 		10ECA5542690757B00E14EC3 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		10ECA56426907B7F00E14EC3 /* ImageGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageGalleryViewModel.swift; sourceTree = "<group>"; };
+		10ECA56926907FE600E14EC3 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		10ECA56E269081FA00E14EC3 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		10ECA5742690849600E14EC3 /* GridPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridPhoto.swift; sourceTree = "<group>"; };
+		10ECA57F269087BC00E14EC3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1ED5C6D945720142F6DE4681 /* Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests.release.xcconfig"; path = "Target Support Files/Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests/Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests.release.xcconfig"; sourceTree = "<group>"; };
 		24E83954477D0A1397911986 /* Pods_ElectroluxCodeAssignment_ElectroluxCodeAssignmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElectroluxCodeAssignment_ElectroluxCodeAssignmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE547DA256AB7B45D7460A1 /* Pods_ElectroluxCodeAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElectroluxCodeAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +130,7 @@
 		10ECA4CD26905CE900E14EC3 /* ElectroluxCodeAssignment */ = {
 			isa = PBXGroup;
 			children = (
+				10ECA5732690847100E14EC3 /* Views */,
 				10ECA54B2690690A00E14EC3 /* Models */,
 				10ECA53E2690644400E14EC3 /* config.txt */,
 				10ECA51226905EC400E14EC3 /* Extensions */,
@@ -132,6 +141,7 @@
 				10ECA4D726905CEB00E14EC3 /* Info.plist */,
 				10ECA4D426905CEB00E14EC3 /* Preview Content */,
 				10ECA56426907B7F00E14EC3 /* ImageGalleryViewModel.swift */,
+				10ECA57F269087BC00E14EC3 /* Constants.swift */,
 			);
 			path = ElectroluxCodeAssignment;
 			sourceTree = "<group>";
@@ -174,6 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				10ECA5542690757B00E14EC3 /* Color+Extension.swift */,
+				10ECA56926907FE600E14EC3 /* View+Extension.swift */,
+				10ECA56E269081FA00E14EC3 /* Array+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -184,6 +196,14 @@
 				10ECA54C2690691D00E14EC3 /* FlickrPhotosResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		10ECA5732690847100E14EC3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				10ECA5742690849600E14EC3 /* GridPhoto.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		5CD79ADDCF8EBBBD8E5FD2BF /* Frameworks */ = {
@@ -451,8 +471,12 @@
 				10ECA5552690757B00E14EC3 /* Color+Extension.swift in Sources */,
 				10ECA51C26905F1700E14EC3 /* NetworkManager.swift in Sources */,
 				10ECA4D126905CE900E14EC3 /* ImageGalleryView.swift in Sources */,
+				10ECA5752690849600E14EC3 /* GridPhoto.swift in Sources */,
+				10ECA580269087BC00E14EC3 /* Constants.swift in Sources */,
 				10ECA4CF26905CE900E14EC3 /* ElectroluxCodeAssignmentApp.swift in Sources */,
+				10ECA56A26907FE600E14EC3 /* View+Extension.swift in Sources */,
 				10ECA56526907B7F00E14EC3 /* ImageGalleryViewModel.swift in Sources */,
+				10ECA56F269081FA00E14EC3 /* Array+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

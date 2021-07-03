@@ -12,4 +12,5 @@ extension Color {
     static let gridPhotoColor = Color.white
     static let searchFieldBackground = Color(red: 190/255, green: 190/255, blue: 190/255)
     static let buttonTextColor = Color.blue
+    static let photoHighlight = Color.yellow.opacity(0.5)
 }

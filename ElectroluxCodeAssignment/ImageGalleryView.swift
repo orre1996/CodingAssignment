@@ -13,8 +13,9 @@ struct ImageGalleryView: View {
     
     @State var currentSearchInput = ""
     @State var isEditing = false
+    @State var selectedPhotoIndex: Int? = nil
     
-    let singlePadding: CGFloat = 8.0
+    let singlePadding: CGFloat = Constants.singlePadding
     
     private let gridLayout = [
         GridItem(.flexible(), spacing: 0),
@@ -80,25 +81,29 @@ struct ImageGalleryView: View {
             }
             .padding(EdgeInsets(top: singlePadding,
                                 leading: singlePadding,
-                                bottom: singlePadding, trailing: 8))
+                                bottom: singlePadding,
+                                trailing: singlePadding * 2))
             .background(Color.white)
             .cornerRadius(singlePadding)
                 
                 
+                if isEditing {
                 Button(action: {
-                    //TODO: Cancel search - Oscar B. 3/7-21
+                    isEditing = false
+                    endTextEditing()
                 }) {
                     Text("Cancel")
                 }
-                .padding(.horizontal, singlePadding * 2)
+                .padding(.leading, singlePadding * 2)
                 .frame(height: singlePadding * 8,
                        alignment: .center)
+                }
             }
         }
         .padding(EdgeInsets(top: singlePadding,
                             leading: singlePadding * 2,
                             bottom: singlePadding,
-                            trailing: 0))
+                            trailing: singlePadding * 2))
         .frame(maxWidth: .infinity, maxHeight: singlePadding * 8)
         .background(Color.searchFieldBackground)
     }
@@ -106,17 +111,13 @@ struct ImageGalleryView: View {
     private var photoGrid: some View {
         ScrollView {
             LazyVGrid(columns: gridLayout, spacing: 0) {
-                ForEach(0..<viewModel.images.count, id: \.self) { index in
+                ForEach(0..<(viewModel.flickrPhotoResponse?.photos?.photo?.count ?? 0), id: \.self) { index in
                     
-                    GeometryReader { reader in
-                        ZStack {
-                            Color.gridPhotoColor.padding(singlePadding * 2)
-                        }
-                        .frame(width: reader.size.width,
-                               height: reader.size.width)
-                    }
-                    .frame(width: UIScreen.main.bounds.width / 2,
-                           height: UIScreen.main.bounds.width / 2)
+                    GridPhoto(image: viewModel.getImage(at: index),
+                                   isHighlighted: selectedPhotoIndex == index,
+                                   photoSelected: {
+                                    selectedPhotoIndex = index
+                                   })
                 }
             }
         }

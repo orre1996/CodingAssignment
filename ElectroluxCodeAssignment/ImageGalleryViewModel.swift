@@ -27,8 +27,22 @@ class ImageGalleryViewModel: ObservableObject {
     }
     
     func addEmptyImages(urls: [Photo]?) {
-        for _ in urls ?? [] {
-            images.append(nil)
+        for (index, photo) in (urls ?? []).enumerated() {
+            downloadImage(index: index, url: photo.url_m)
         }
+    }
+    
+    func downloadImage(index: Int, url: String?) {
+        if let url = url {
+            networkManager.getImage(url: url, completion: { image in
+                DispatchQueue.main.async {
+                    self.images.append(image)
+                }
+            })
+        }
+    }
+    
+    func getImage(at index: Int) -> UIImage? {
+        return images[safely: index] ?? nil
     }
 }

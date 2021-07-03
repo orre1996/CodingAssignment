@@ -77,4 +77,10 @@ class NetworkManager {
             }
         })
     }
+    
+    public func getImage(url: String, completion: @escaping(UIImage?) -> ()) {
+        getRequest(url: url, completion: { data in
+            completion(UIImage(data: data ?? Data()))
+        })
+    }
 }
