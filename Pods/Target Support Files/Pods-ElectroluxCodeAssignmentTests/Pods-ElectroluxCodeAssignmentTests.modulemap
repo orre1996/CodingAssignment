@@ -1,6 +1,0 @@
-framework module Pods_ElectroluxCodeAssignmentTests {
-  umbrella header "Pods-ElectroluxCodeAssignmentTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
