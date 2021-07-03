@@ -57,9 +57,9 @@ class NetworkManager {
         }
     }
     
-    func getPhotosFromFlickr(searchWord: String, completion: @escaping (FlickrPhotosResponse?) -> ()) {
+    func getPhotosFromFlickr(searchWord: String, page: Int, completion: @escaping (FlickrPhotosResponse?) -> ()) {
         
-        let url = "https://api.flickr.com/services/rest?\(apiKey)&method=flickr.photos.search&tags=\(searchWord)&format=json&nojsoncallback=true&extras=media&extras=url_sq&extras=url_m&per_page=20&page=1"
+        let url = "https://api.flickr.com/services/rest?api_key=\(apiKey)&method=flickr.photos.search&tags=\(searchWord)&format=json&nojsoncallback=true&extras=media&extras=url_sq&extras=url_m&per_page=20&page=\(page)"
         
         getRequest(url: url, completion: { data in
             let decoder = JSONDecoder()

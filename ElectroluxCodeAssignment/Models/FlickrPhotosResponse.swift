@@ -8,10 +8,14 @@
 import Foundation
 
 struct FlickrPhotosResponse: Codable {
-    let page: Int?
-    let photos: [Photo]?
+    let photos: Photos?
 }
 
 struct Photo: Codable {
-    let url: String
+    let url_m: String?
+}
+
+struct Photos: Codable {
+    let page: Int?
+    let photo: [Photo]?
 }

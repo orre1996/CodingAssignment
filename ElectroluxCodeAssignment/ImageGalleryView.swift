@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ImageGalleryView: View {
     
+    @StateObject var viewModel = ImageGalleryViewModel()
+    
     @State var currentSearchInput = ""
     @State var isEditing = false
     
@@ -21,7 +23,7 @@ struct ImageGalleryView: View {
     
     var body: some View {
         ZStack {
-            Color.gray
+            Color.photosGridBackground
             
             VStack(spacing: 0) {
                 headerView
@@ -32,6 +34,9 @@ struct ImageGalleryView: View {
             }
         }
         .ignoresSafeArea()
+        .onAppear {
+            viewModel.getFlickrImages()
+        }
     }
     
     private var headerView: some View {
@@ -101,12 +106,10 @@ struct ImageGalleryView: View {
     private var photoGrid: some View {
         ScrollView {
             LazyVGrid(columns: gridLayout, spacing: 0) {
-                ForEach(0...19, id: \.self) { index in
+                ForEach(0..<viewModel.images.count, id: \.self) { index in
                     
                     GeometryReader { reader in
                         ZStack {
-                            Color.photosGridBackground
-                            
                             Color.gridPhotoColor.padding(singlePadding * 2)
                         }
                         .frame(width: reader.size.width,
