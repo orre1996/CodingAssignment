@@ -11,8 +11,6 @@
 		10ECA4D126905CE900E14EC3 /* ImageGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ECA4D026905CE900E14EC3 /* ImageGalleryView.swift */; };
 		10ECA4D326905CEB00E14EC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10ECA4D226905CEB00E14EC3 /* Assets.xcassets */; };
 		10ECA4D626905CEB00E14EC3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10ECA4D526905CEB00E14EC3 /* Preview Assets.xcassets */; };
-		10ECA4E126905CEB00E14EC3 /* ElectroluxCodeAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ECA4E026905CEB00E14EC3 /* ElectroluxCodeAssignmentTests.swift */; };
-		10ECA4EC26905CEB00E14EC3 /* ElectroluxCodeAssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ECA4EB26905CEB00E14EC3 /* ElectroluxCodeAssignmentUITests.swift */; };
 		10ECA51C26905F1700E14EC3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ECA51B26905F1700E14EC3 /* NetworkManager.swift */; };
 		10ECA53F2690644400E14EC3 /* config.txt in Resources */ = {isa = PBXBuildFile; fileRef = 10ECA53E2690644400E14EC3 /* config.txt */; };
 		10ECA54D2690691D00E14EC3 /* FlickrPhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ECA54C2690691D00E14EC3 /* FlickrPhotosResponse.swift */; };
@@ -52,11 +50,7 @@
 		10ECA4D526905CEB00E14EC3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		10ECA4D726905CEB00E14EC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10ECA4DC26905CEB00E14EC3 /* ElectroluxCodeAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElectroluxCodeAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		10ECA4E026905CEB00E14EC3 /* ElectroluxCodeAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectroluxCodeAssignmentTests.swift; sourceTree = "<group>"; };
-		10ECA4E226905CEB00E14EC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10ECA4E726905CEB00E14EC3 /* ElectroluxCodeAssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElectroluxCodeAssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		10ECA4EB26905CEB00E14EC3 /* ElectroluxCodeAssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectroluxCodeAssignmentUITests.swift; sourceTree = "<group>"; };
-		10ECA4ED26905CEB00E14EC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10ECA51B26905F1700E14EC3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		10ECA53E2690644400E14EC3 /* config.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.txt; sourceTree = "<group>"; };
 		10ECA54C2690691D00E14EC3 /* FlickrPhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotosResponse.swift; sourceTree = "<group>"; };
@@ -66,15 +60,9 @@
 		10ECA56E269081FA00E14EC3 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		10ECA5742690849600E14EC3 /* GridPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridPhoto.swift; sourceTree = "<group>"; };
 		10ECA57F269087BC00E14EC3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		1ED5C6D945720142F6DE4681 /* Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests.release.xcconfig"; path = "Target Support Files/Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests/Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests.release.xcconfig"; sourceTree = "<group>"; };
 		24E83954477D0A1397911986 /* Pods_ElectroluxCodeAssignment_ElectroluxCodeAssignmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElectroluxCodeAssignment_ElectroluxCodeAssignmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE547DA256AB7B45D7460A1 /* Pods_ElectroluxCodeAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElectroluxCodeAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		523A0800B694498512EF2E09 /* Pods-ElectroluxCodeAssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroluxCodeAssignmentTests.debug.xcconfig"; path = "Target Support Files/Pods-ElectroluxCodeAssignmentTests/Pods-ElectroluxCodeAssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
-		62999A8100167E292C403B93 /* Pods-ElectroluxCodeAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroluxCodeAssignment.debug.xcconfig"; path = "Target Support Files/Pods-ElectroluxCodeAssignment/Pods-ElectroluxCodeAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 		8CCECE7954E62DD0B673D782 /* Pods_ElectroluxCodeAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElectroluxCodeAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DDD627E0F7E57A9BE28504E /* Pods-ElectroluxCodeAssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroluxCodeAssignmentTests.release.xcconfig"; path = "Target Support Files/Pods-ElectroluxCodeAssignmentTests/Pods-ElectroluxCodeAssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
-		AD2BCABBC85F75E0F44500A1 /* Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests.debug.xcconfig"; path = "Target Support Files/Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests/Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		FCB0C0D9E2906BB359CCFB31 /* Pods-ElectroluxCodeAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroluxCodeAssignment.release.xcconfig"; path = "Target Support Files/Pods-ElectroluxCodeAssignment/Pods-ElectroluxCodeAssignment.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,10 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				10ECA4CD26905CE900E14EC3 /* ElectroluxCodeAssignment */,
-				10ECA4DF26905CEB00E14EC3 /* ElectroluxCodeAssignmentTests */,
-				10ECA4EA26905CEB00E14EC3 /* ElectroluxCodeAssignmentUITests */,
 				10ECA4CC26905CE900E14EC3 /* Products */,
-				F25944A104E08B0DB271ECB8 /* Pods */,
 				5CD79ADDCF8EBBBD8E5FD2BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -152,24 +137,6 @@
 				10ECA4D526905CEB00E14EC3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		10ECA4DF26905CEB00E14EC3 /* ElectroluxCodeAssignmentTests */ = {
-			isa = PBXGroup;
-			children = (
-				10ECA4E026905CEB00E14EC3 /* ElectroluxCodeAssignmentTests.swift */,
-				10ECA4E226905CEB00E14EC3 /* Info.plist */,
-			);
-			path = ElectroluxCodeAssignmentTests;
-			sourceTree = "<group>";
-		};
-		10ECA4EA26905CEB00E14EC3 /* ElectroluxCodeAssignmentUITests */ = {
-			isa = PBXGroup;
-			children = (
-				10ECA4EB26905CEB00E14EC3 /* ElectroluxCodeAssignmentUITests.swift */,
-				10ECA4ED26905CEB00E14EC3 /* Info.plist */,
-			);
-			path = ElectroluxCodeAssignmentUITests;
 			sourceTree = "<group>";
 		};
 		10ECA51126905EBF00E14EC3 /* Managers */ = {
@@ -214,19 +181,6 @@
 				3CE547DA256AB7B45D7460A1 /* Pods_ElectroluxCodeAssignmentTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F25944A104E08B0DB271ECB8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				62999A8100167E292C403B93 /* Pods-ElectroluxCodeAssignment.debug.xcconfig */,
-				FCB0C0D9E2906BB359CCFB31 /* Pods-ElectroluxCodeAssignment.release.xcconfig */,
-				AD2BCABBC85F75E0F44500A1 /* Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests.debug.xcconfig */,
-				1ED5C6D945720142F6DE4681 /* Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests.release.xcconfig */,
-				523A0800B694498512EF2E09 /* Pods-ElectroluxCodeAssignmentTests.debug.xcconfig */,
-				8DDD627E0F7E57A9BE28504E /* Pods-ElectroluxCodeAssignmentTests.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,7 +438,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10ECA4E126905CEB00E14EC3 /* ElectroluxCodeAssignmentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,7 +445,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10ECA4EC26905CEB00E14EC3 /* ElectroluxCodeAssignmentUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,7 +582,6 @@
 		};
 		10ECA4F126905CEB00E14EC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62999A8100167E292C403B93 /* Pods-ElectroluxCodeAssignment.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -654,7 +605,6 @@
 		};
 		10ECA4F226905CEB00E14EC3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCB0C0D9E2906BB359CCFB31 /* Pods-ElectroluxCodeAssignment.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -678,7 +628,6 @@
 		};
 		10ECA4F426905CEB00E14EC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 523A0800B694498512EF2E09 /* Pods-ElectroluxCodeAssignmentTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -701,7 +650,6 @@
 		};
 		10ECA4F526905CEB00E14EC3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DDD627E0F7E57A9BE28504E /* Pods-ElectroluxCodeAssignmentTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -724,7 +672,6 @@
 		};
 		10ECA4F726905CEB00E14EC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AD2BCABBC85F75E0F44500A1 /* Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
@@ -745,7 +692,6 @@
 		};
 		10ECA4F826905CEB00E14EC3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1ED5C6D945720142F6DE4681 /* Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
