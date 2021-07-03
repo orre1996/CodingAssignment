@@ -16,6 +16,7 @@
 		10ECA51C26905F1700E14EC3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ECA51B26905F1700E14EC3 /* NetworkManager.swift */; };
 		10ECA53F2690644400E14EC3 /* config.txt in Resources */ = {isa = PBXBuildFile; fileRef = 10ECA53E2690644400E14EC3 /* config.txt */; };
 		10ECA54D2690691D00E14EC3 /* FlickrPhotosResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ECA54C2690691D00E14EC3 /* FlickrPhotosResponse.swift */; };
+		10ECA5552690757B00E14EC3 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ECA5542690757B00E14EC3 /* Color+Extension.swift */; };
 		1A741AD1571D25A6DA3FFEF3 /* Pods_ElectroluxCodeAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCECE7954E62DD0B673D782 /* Pods_ElectroluxCodeAssignment.framework */; };
 		6380875E036938B13C452C54 /* Pods_ElectroluxCodeAssignment_ElectroluxCodeAssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E83954477D0A1397911986 /* Pods_ElectroluxCodeAssignment_ElectroluxCodeAssignmentUITests.framework */; };
 		9D9218DDE9C238628ECFCA22 /* Pods_ElectroluxCodeAssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CE547DA256AB7B45D7460A1 /* Pods_ElectroluxCodeAssignmentTests.framework */; };
@@ -54,6 +55,7 @@
 		10ECA51B26905F1700E14EC3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		10ECA53E2690644400E14EC3 /* config.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = config.txt; sourceTree = "<group>"; };
 		10ECA54C2690691D00E14EC3 /* FlickrPhotosResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotosResponse.swift; sourceTree = "<group>"; };
+		10ECA5542690757B00E14EC3 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		1ED5C6D945720142F6DE4681 /* Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests.release.xcconfig"; path = "Target Support Files/Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests/Pods-ElectroluxCodeAssignment-ElectroluxCodeAssignmentUITests.release.xcconfig"; sourceTree = "<group>"; };
 		24E83954477D0A1397911986 /* Pods_ElectroluxCodeAssignment_ElectroluxCodeAssignmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElectroluxCodeAssignment_ElectroluxCodeAssignmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CE547DA256AB7B45D7460A1 /* Pods_ElectroluxCodeAssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElectroluxCodeAssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +170,7 @@
 		10ECA51226905EC400E14EC3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				10ECA5542690757B00E14EC3 /* Color+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10ECA54D2690691D00E14EC3 /* FlickrPhotosResponse.swift in Sources */,
+				10ECA5552690757B00E14EC3 /* Color+Extension.swift in Sources */,
 				10ECA51C26905F1700E14EC3 /* NetworkManager.swift in Sources */,
 				10ECA4D126905CE900E14EC3 /* ImageGalleryView.swift in Sources */,
 				10ECA4CF26905CE900E14EC3 /* ElectroluxCodeAssignmentApp.swift in Sources */,
