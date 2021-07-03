@@ -95,7 +95,9 @@ struct ImageGalleryView: View {
                 TextField("Search", text: $currentSearchInput, onEditingChanged: { isEditing in
                     self.isEditing = isEditing
                 }, onCommit: {
-                    viewModel.getFlickrImages(searchWord: currentSearchInput)
+                    if !currentSearchInput.isEmpty {
+                        viewModel.getFlickrImages(searchWord: currentSearchInput)
+                    }
                 })
                 
             }
@@ -137,6 +139,7 @@ struct ImageGalleryView: View {
                     GridPhoto(image: viewModel.getImage(at: index),
                                    isHighlighted: selectedPhotoIndex == index,
                                    photoSelected: {
+                                    endTextEditing()
                                     selectedPhotoIndex = index
                                    })
                 }
