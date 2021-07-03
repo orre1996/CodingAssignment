@@ -72,14 +72,14 @@ struct ImageGalleryView: View {
             }
             
             Text("Flickr Photos")
-                .foregroundColor(Color.black)
+                .foregroundColor(Color.navigationTitleColor)
         }
         .padding(EdgeInsets(top: singlePadding * 4,
                             leading: singlePadding * 2,
                             bottom: 0,
                             trailing: singlePadding * 2))
         .frame(maxWidth: .infinity, maxHeight: singlePadding * 10)
-        .background(Color.white)
+        .background(Color.navigationViewBackground)
     }
     
     private var searchView: some View {
@@ -90,12 +90,14 @@ struct ImageGalleryView: View {
                 
                 Image(systemName: "magnifyingglass")
                     .renderingMode(.template)
-                    .foregroundColor(.gray)
+                    .foregroundColor(.inputFieldImage)
                 
                 TextField("Search", text: $currentSearchInput, onEditingChanged: { isEditing in
                     self.isEditing = isEditing
                 }, onCommit: {
-                    viewModel.getFlickrImages(searchWord: currentSearchInput)
+                    if !currentSearchInput.isEmpty {
+                        viewModel.getFlickrImages(searchWord: currentSearchInput)
+                    }
                 })
                 
             }
@@ -103,7 +105,7 @@ struct ImageGalleryView: View {
                                 leading: singlePadding,
                                 bottom: singlePadding,
                                 trailing: singlePadding * 2))
-            .background(Color.white)
+            .background(Color.inputFieldBackground)
             .cornerRadius(singlePadding)
                 
                 
@@ -137,6 +139,7 @@ struct ImageGalleryView: View {
                     GridPhoto(image: viewModel.getImage(at: index),
                                    isHighlighted: selectedPhotoIndex == index,
                                    photoSelected: {
+                                    endTextEditing()
                                     selectedPhotoIndex = index
                                    })
                 }
