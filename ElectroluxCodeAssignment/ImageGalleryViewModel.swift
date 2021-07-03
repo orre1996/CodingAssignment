@@ -21,7 +21,7 @@ class ImageGalleryViewModel: ObservableObject {
     let networkManager = NetworkManager.shared
     
     func getFlickrImages(searchWord: String = "Electrolux") {
-        networkManager.getPhotosFromFlickr(searchWord: searchWord completion: { [weak self] flickrPhotoResponse in
+        networkManager.getPhotosFromFlickr(searchWord: searchWord, completion: { [weak self] flickrPhotoResponse in
             if let response = flickrPhotoResponse, !(response.photos?.photo?.isEmpty ?? false) {
                 DispatchQueue.main.async {
                     self?.flickrPhotoResponse = response
