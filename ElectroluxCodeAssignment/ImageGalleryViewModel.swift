@@ -11,7 +11,9 @@ import UIKit
 class ImageGalleryViewModel: ObservableObject {
     
     var flickrPhotoResponse: FlickrPhotosResponse?
+    
     @Published var images = [UIImage?]()
+    @Published var showError = false
     
     let networkManager = NetworkManager.shared
     
@@ -20,25 +22,28 @@ class ImageGalleryViewModel: ObservableObject {
             if let response = flickrPhotoResponse {
                 DispatchQueue.main.async {
                     self.flickrPhotoResponse = response
-                    self.addEmptyImages(urls: response.photos?.photo)
+                    self.downloadImages(urls: response.photos?.photo)
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.showError = true
                 }
             }
         })
     }
     
-    func addEmptyImages(urls: [Photo]?) {
-        for (index, photo) in (urls ?? []).enumerated() {
-            downloadImage(index: index, url: photo.url_m)
-        }
-    }
-    
-    func downloadImage(index: Int, url: String?) {
-        if let url = url {
-            networkManager.getImage(url: url, completion: { image in
-                DispatchQueue.main.async {
-                    self.images.append(image)
-                }
-            })
+
+    func downloadImages(urls: [Photo]?) {
+        images.removeAll()
+        
+        for photo in urls ?? [] {
+            if let url = photo.url_m {
+                networkManager.getImage(url: url, completion: { image in
+                    DispatchQueue.main.async {
+                        self.images.append(image)
+                    }
+                })
+            }
         }
     }
     

@@ -38,6 +38,11 @@ struct ImageGalleryView: View {
         .onAppear {
             viewModel.getFlickrImages()
         }
+        .alert(isPresented: $viewModel.showError) {
+            Alert(title: Text("Error"),
+                  message: Text("Couldn´t find images for the typed keyword, try something else"),
+                  dismissButton: .default(Text("OK")))
+        }
     }
     
     private var headerView: some View {
@@ -76,6 +81,8 @@ struct ImageGalleryView: View {
                 
                 TextField("Search", text: $currentSearchInput, onEditingChanged: { isEditing in
                     self.isEditing = isEditing
+                }, onCommit: {
+                    viewModel.getFlickrImages(searchWord: currentSearchInput)
                 })
                 
             }
