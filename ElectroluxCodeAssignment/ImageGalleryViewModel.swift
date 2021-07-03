@@ -13,21 +13,22 @@ class ImageGalleryViewModel: ObservableObject {
     var flickrPhotoResponse: FlickrPhotosResponse?
     
     @Published var images = [UIImage?]()
-    @Published var showError = false
+    @Published var showAlert = false
+    
+    @Published var alertTitle = ""
+    @Published var alertBody = ""
     
     let networkManager = NetworkManager.shared
     
     func getFlickrImages(searchWord: String = "Electrolux") {
-        networkManager.getPhotosFromFlickr(searchWord: searchWord, page: 1, completion: { flickrPhotoResponse in
-            if let response = flickrPhotoResponse {
+        networkManager.getPhotosFromFlickr(searchWord: searchWord, page: 1, completion: { [weak self] flickrPhotoResponse in
+            if let response = flickrPhotoResponse, !(response.photos?.photo?.isEmpty ?? false) {
                 DispatchQueue.main.async {
-                    self.flickrPhotoResponse = response
-                    self.downloadImages(urls: response.photos?.photo)
+                    self?.flickrPhotoResponse = response
+                    self?.downloadImages(urls: response.photos?.photo)
                 }
             } else {
-                DispatchQueue.main.async {
-                    self.showError = true
-                }
+                self?.setAlert(title: "Error", body: "Couldn´t find images for the typed keyword, try something else")
             }
         })
     }
@@ -39,8 +40,8 @@ class ImageGalleryViewModel: ObservableObject {
         for photo in urls ?? [] {
             if let url = photo.url_m {
                 networkManager.getImage(url: url, completion: { image in
-                    DispatchQueue.main.async {
-                        self.images.append(image)
+                    DispatchQueue.main.async { [weak self] in
+                        self?.images.append(image)
                     }
                 })
             }
@@ -49,5 +50,13 @@ class ImageGalleryViewModel: ObservableObject {
     
     func getImage(at index: Int) -> UIImage? {
         return images[safely: index] ?? nil
+    }
+    
+    func setAlert(title: String, body: String) {
+        DispatchQueue.main.async { [weak self] in
+            self?.alertTitle = title
+            self?.alertBody = body
+            self?.showAlert = true
+        }
     }
 }

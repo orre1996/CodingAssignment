@@ -15,8 +15,7 @@ struct ImageGalleryView: View {
     @State var isEditing = false
     @State var selectedPhotoIndex: Int? = nil
     
-    let singlePadding: CGFloat = Constants.singlePadding
-    
+    private let singlePadding: CGFloat = Constants.singlePadding
     private let gridLayout = [
         GridItem(.flexible(), spacing: 0),
         GridItem(.flexible(), spacing: 0)
@@ -31,16 +30,22 @@ struct ImageGalleryView: View {
                 
                 searchView
                 
-                photoGrid
+                if viewModel.flickrPhotoResponse != nil {
+                    photoGrid
+                } else {
+                    ProgressView()
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                }
             }
         }
         .ignoresSafeArea()
         .onAppear {
             viewModel.getFlickrImages()
         }
-        .alert(isPresented: $viewModel.showError) {
-            Alert(title: Text("Error"),
-                  message: Text("Couldn´t find images for the typed keyword, try something else"),
+        .alert(isPresented: $viewModel.showAlert) {
+            
+            Alert(title: Text(viewModel.alertTitle),
+                  message: Text(viewModel.alertBody),
                   dismissButton: .default(Text("OK")))
         }
     }
@@ -51,10 +56,18 @@ struct ImageGalleryView: View {
                 
                 Spacer()
                 
-                Button(action: {
-                    //TODO: Save selected image - Oscar B. 3/7-21
-                }) {
-                    Text("Save")
+                if selectedPhotoIndex != nil {
+                    Button(action: {
+                        guard let selectedPhotoIndex = selectedPhotoIndex else { return }
+                        if let image = viewModel.getImage(at: selectedPhotoIndex) {
+                            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+                            self.selectedPhotoIndex = nil
+                            viewModel.setAlert(title: "Image saved",
+                                               body: "The selected image was saved to your photo library")
+                        }
+                    }) {
+                        Text("Save")
+                    }
                 }
             }
             
@@ -97,6 +110,7 @@ struct ImageGalleryView: View {
                 if isEditing {
                 Button(action: {
                     isEditing = false
+                    currentSearchInput = ""
                     endTextEditing()
                 }) {
                     Text("Cancel")
